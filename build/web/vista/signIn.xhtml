@@ -35,12 +35,12 @@
                             <h:form  id="signIn_form">
                                 <div class="form-group">
                                     <h:outputLabel class="lead text-muted">#{txt['signIn.correo']}</h:outputLabel>
-                                    <h:inputText id="email" value="#{emailUser}"  class="form-control" a:placeholder="ejemplo@ejemplo.com" />
+                                    <h:inputText id="email" value="#{emailUser}"  class="form-control" a:placeholder=" #{txt['sigIn.placeholderCorreo']}"></h:inputText>
                                 </div>
 
                                 <div class="form-group">
                                     <h:outputLabel class="lead text-muted">#{txt['signIn.clave']}</h:outputLabel>
-                                    <h:inputSecret id="password" value="#{passUser}" class="form-control">
+                                    <h:inputSecret id="password" value="#{passUser}" class="form-control" a:placeholder="#{txt['sigIn.placeholderContraseña']}">
                                     </h:inputSecret>
                                 </div>
 
