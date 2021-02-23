@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <f:view locale="#{internazionalBean.localidad}">
+        <h:head>
+            <title>.:Mouth System:.</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <!--css-->  
+            <h:outputStylesheet library="css" name="dashboard.css" />
+            <h:outputStylesheet library="css" name="bootstrap.css" />
+            <h:outputStylesheet library="css" name="bootstrap-grid.css" />
+            <h:outputStylesheet library="css" name="bootstrap-reboot.css" />
+            <h:outputStylesheet library="css" name="all.css" />
+        </h:head>
+        <h:body>
+
+            <ui:include src="../../complementos/navBarSystem.xhtml" />
+
+
+            <div class="container-fluid">
+                <div class="row">
+                    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                        <div class="sidebar-sticky pt-3">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">
+                                        <span data-feather="home"></span>
+                                        <i class="fa fa-tablet"></i> #{txt['ms.tablero']} <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span data-feather="file"></span>
+                                        <i class="fas fa-file-medical"></i> #{txt['ms.hc']}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span data-feather="shopping-cart"></span>
+                                        <i class="fa fa-calendar"></i> #{txt['ms.citas']}
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                                <span><i class="fas fa-toolbox"></i> #{txt['ms.administracion']}</span>
+                                <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+                                    <span data-feather="plus-circle"></span>
+                                </a>
+                            </h6>
+                            <ul class="nav flex-column mb-2">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span data-feather="file-text"></span>
+                                        <i class="fa fa-cogs"></i> #{txt['ms.reportes']}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span data-feather="users"></span>
+                                        <i class="fa fa-box"></i> #{txt['ms.inventario']}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span data-feather="file-text"></span>
+                                        <i class="fas fa-file-image"></i> #{txt['ms.catalogo']}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span data-feather="file-text"></span>
+                                        <i class="fas fa-star-half"></i> #{txt['ms.fidelizacion']}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span data-feather="file-text"></span>
+                                        <i class="fas fa-users-cog"></i> #{txt['ms.perfil']}
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span data-feather="file-text"></span>
+                                        <i class="fas fa-sign-out-alt"></i> #{txt['ms.salir']}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                            <h1 class="h2"><i class="fa fa-tablet"></i> #{txt['ms.tablero']}</h1>
+                            <div class="btn-toolbar mb-2 mb-md-0">
+                                <div class="btn-group mr-2">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                                        <span data-feather="calendar"></span>
+                                        #{txt['ms.botonExportar']}
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                                        <span data-feather="calendar"></span>
+                                        #{txt['ms.botonGrafico']}
+                                    </button>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <ui:include src="../../complementos/footerSystem.xhtml" />
+                    </main>
+                </div>
+            </div>
+
+
+            <!--js--> 
+            <h:outputScript library="js" name="all.min.js"/> 
+            <h:outputScript library="js" name="bootstrap.js"/> 
+            <h:outputScript library="js" name="jquery-1.7.js"/> 
+        </h:body>
+    </f:view>
+</html>
+
+

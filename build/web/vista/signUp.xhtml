@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <f:view locale="#{internazionalBean.localidad}">
+        <h:head>
+            <title>Sign Up</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <!--css-->  
+            <h:outputStylesheet library="css" name="bootstrap.css" />
+            <h:outputStylesheet library="css" name="bootstrap-grid.css" />
+            <h:outputStylesheet library="css" name="bootstrap-reboot.css" />
+            <h:outputStylesheet library="css" name="all.css" />
+        </h:head>
+        <h:body style="background-image: url(../resources/img/maxresdefault.jpg); background-repeat: no-repeat; background-size: initial  ">
+
+
+            <ui:include src="../complementos/navBar.xhtml" />
+
+
+
+            <div class="container  mt-5">
+                <div class="row ">
+
+                    <div class="col-md-12 text-center mt-5 ">
+                        <h:graphicImage library="img" name="icoo.png" class="mt-2 img-thumbnail"  style="width: 100px; height: 100px" />
+                    </div>
+
+                    <div class="card mt-3 mx-auto">
+                        <div class="card-body">
+                            <h:form  id="signIn_form">
+                                <div class="form-group">
+                                    <h:outputLabel class="lead text-muted">#{txt['signIn.correo']}</h:outputLabel>
+                                    <h:inputText id="email" value="#{emailUser}"  class="form-control" a:placeholder="#{txt['sign.placeholderEmail']}" />
+                                </div>
+
+                                <div class="form-group">
+                                    <h:outputLabel class="lead text-muted">#{txt['signIn.clave']}</h:outputLabel>
+                                    <h:inputSecret id="password" value="#{passUser}" class="form-control">
+                                    </h:inputSecret>
+                                </div>
+                                <div class="form-group">
+                                    <h:outputLabel class="lead text-muted">#{txt['signIn.clave2']}</h:outputLabel>
+                                    <h:inputSecret id="password2" value="#{passUser2}" class="form-control">
+                                    </h:inputSecret>
+                                </div>
+
+                                <h:commandButton action="Mouth_System/mouth_system"   value="#{txt['signUp.boton']}" class="btn btn-block btn-outline-info" />
+
+                            </h:form>
+
+                        </div>
+                
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!--js--> 
+            <h:outputScript library="js" name="jquery-1.7.js"/> 
+            <h:outputScript library="js" name="all.min.js"/> 
+            <h:outputScript library="js" name="bootstrap.js"/> 
+            <h:outputScript library="js" name="bootstrap.min.js"/> 
+        </h:body>
+
+    </f:view>
+</html>
+
+
+
