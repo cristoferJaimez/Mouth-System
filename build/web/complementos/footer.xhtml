@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-    <h:head>
+      <h:head>
         <title></title>
         <!--css-->  
         <h:outputStylesheet library="css" name="bootstrap.css" />
@@ -54,14 +55,14 @@
 
                     <div class="form-group">
                         <label class="lead text-muted">Mensaje</label>
-                        <h:inputTextarea id="msm" class="form-control" required="true"> 
+                        <h:inputTextarea id="msm" class="form-control" required="true" pt:placeholder="mensaje"> 
                             <f:validateLongRange minimum="-10" maximum="10"></f:validateLongRange>    
                         </h:inputTextarea>
 
                     </div>
 
                     <h:commandButton action="#" class="btn btn-block btn-outline-secondary" value="Enviar">
-                        
+
                     </h:commandButton>
                     <h:message for="email"></h:message>
                 </h:form>
