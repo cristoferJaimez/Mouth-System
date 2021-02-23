@@ -2,6 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
@@ -35,17 +36,24 @@
                             <h:form  id="signIn_form">
                                 <div class="form-group">
                                     <h:outputLabel class="lead text-muted">#{txt['signIn.correo']}</h:outputLabel>
-                                    <h:inputText id="email" value="#{emailUser}"  class="form-control" a:placeholder=" #{txt['sigIn.placeholderCorreo']}"></h:inputText>
+                                    <h:inputText id="email" pt:type="email" required="true" value="#{emailUser}"  class="form-control" a:placeholder=" #{txt['sigIn.placeholderCorreo']}" label="Email"></h:inputText>
+                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                        <strong> <h:message for="email"/> </strong>
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
                                     <h:outputLabel class="lead text-muted">#{txt['signIn.clave']}</h:outputLabel>
-                                    <h:inputSecret id="password" value="#{passUser}" class="form-control" a:placeholder="#{txt['sigIn.placeholderContraseña']}">
+                                    <h:inputSecret id="password" pt:type="password" required="true" value="#{passUser}" class="form-control" a:placeholder="#{txt['sigIn.placeholderContraseña']}" label="Password">
+                                    <f:validateLength for="password" maximum="15" minimum="8"/>
                                     </h:inputSecret>
+                                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                        <strong> <h:message for="password"/> </strong>
+                                    </div>
                                 </div>
 
                                 <h:commandButton action="Mouth_System/mouth_system"   value="#{txt['signIn.boton']}" class="btn btn-block btn-outline-info" />
-
+                                 
                             </h:form>
 
 

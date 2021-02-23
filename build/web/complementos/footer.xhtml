@@ -40,21 +40,21 @@
             <div class="col-md-3 col-sm-12 mx-auto">
                 <h:form>
                     <div class="form-group">
-                        <label class="lead text-muted">Email</label>
+                        <label class="lead text-muted">#{txt['footer.labelCorreo']}</label>
                         <h:inputText  id="email" pt:type="email" required="true" class="form-control" pt:placeholder="#{txt['footer.email']}" label="Email">
-                            <f:validateLongRange minimum="-10" maximum="10"></f:validateLongRange>
+                            <f:validateLongRange minimum="-10" maximum="20"></f:validateLongRange>
                         </h:inputText>
                     </div>
 
                     <div class="form-group">
-                        <label class="lead text-muted">Nombre</label>
+                        <label class="lead text-muted">#{txt['footer.labelNombre']}</label>
                         <h:inputText id="nombre" pt:type="text" pt:pattern="[a-z]" required="true" class="form-control" pt:placeholder="#{txt['footer.nombre']}" label="Nombre">
                            <f:validateLongRange minimum="-10" maximum="10"></f:validateLongRange> 
                         </h:inputText>
                     </div>
 
                     <div class="form-group">
-                        <label class="lead text-muted">Mensaje</label>
+                        <label class="lead text-muted">#{txt['footer.labelMensaje']}</label>
                         <h:inputTextarea id="msm" class="form-control" required="true" pt:placeholder="#{txt['footer.msm']}" label="Mensaje"> 
                             <f:validateLongRange minimum="-10" maximum="10"></f:validateLongRange> 
                         </h:inputTextarea>
@@ -62,7 +62,7 @@
 
                     </div>
 
-                    <h:commandButton type="submit" action="#" class="btn btn-block btn-outline-secondary" value="Enviar">
+                    <h:commandButton type="submit" action="#" class="btn btn-block btn-outline-secondary" value="#{txt['footer.botonEnviar']}">
 
                     </h:commandButton>
                     <h:messages/>
