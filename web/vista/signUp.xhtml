@@ -6,7 +6,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-
+  
     <f:view locale="#{internazionalBean.localidad}">
         <h:head>
             <title>Sign Up</title>
@@ -28,11 +28,11 @@
             <div class="container  mt-5">
                 <div class="row ">
 
-                    <div class="col-md-12 text-center mt-5 ">
+                    <div class="col-md-12 text-center mt-3 ">
                         <h:graphicImage library="img" name="icoo.png" class="mt-2 img-thumbnail"  style="width: 100px; height: 100px" />
                     </div>
 
-                    <div class="card mt-3 mx-auto">
+                    <div class="card mt-3 col-4 mx-auto">
                         <div class="card-body">
                             <h:form  id="signIn_form">
                                 <div class="form-group">
@@ -45,7 +45,10 @@
 
                                 <div class="form-group">
                                     <h:outputLabel class="lead text-muted">#{txt['signIn.clave']}</h:outputLabel>
-                                    <h:inputSecret id="password" pt:type="password" value="#{passUser}" required="true" class="form-control" a:placeholder="#{txt['signUp.placeholderContraseña']}" label="Password">
+                                    <h:inputSecret  id="password" pt:type="password" value="#{passUser}" 
+                                                    required="true" class="form-control" 
+                                                    a:placeholder="#{txt['signUp.placeholderContraseña']}" 
+                                                    label="Password">
                                         <f:validateLength for="password" maximum="15" minimum="8"/>
                                     </h:inputSecret>
                                     <div class="alert alert-warning alert-dismissible fade show" role="alert">

@@ -68,7 +68,7 @@ public class ControladorURL extends HttpServlet {
                 break;
 
             case "Login":
-                request.getRequestDispatcher("vista/Login.xhtml").forward(request, response);
+                request.getRequestDispatcher("vista/signIn.xhtml").forward(request, response);
                 break;
                 
             

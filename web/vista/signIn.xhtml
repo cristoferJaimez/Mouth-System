@@ -37,7 +37,7 @@
                                 <div class="form-group">
                                     <h:outputLabel class="lead text-muted">#{txt['signIn.correo']}</h:outputLabel>
                                     <h:inputText id="email" pt:type="email" required="true" value="#{emailUser}"  class="form-control" a:placeholder=" #{txt['sigIn.placeholderCorreo']}" label="Email"></h:inputText>
-                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <div class="col-12 alert alert-warning alert-dismissible fade show" role="alert">
                                         <strong> <h:message for="email"/> </strong>
                                     </div>
                                 </div>
@@ -45,15 +45,15 @@
                                 <div class="form-group">
                                     <h:outputLabel class="lead text-muted">#{txt['signIn.clave']}</h:outputLabel>
                                     <h:inputSecret id="password" pt:type="password" required="true" value="#{passUser}" class="form-control" a:placeholder="#{txt['sigIn.placeholderContraseña']}" label="Password">
-                                    <f:validateLength for="password" maximum="15" minimum="8"/>
+                                        <f:validateLength for="password" maximum="15" minimum="4"/>
                                     </h:inputSecret>
-                                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                        <strong> <h:message for="password"/> </strong>
+                                    <div class=" col-12 alert alert-warning alert-dismissible fade show" role="alert">
+                                        <strong> <i class="fa fa-sdsf" style="color: red"></i> </strong><h:message for="password"/>
                                     </div>
                                 </div>
 
-                                <h:commandButton action="Mouth_System/mouth_system"   value="#{txt['signIn.boton']}" class="btn btn-block btn-outline-info" />
-                                 
+                                <h:commandButton action="#{signInControllers}"   value="#{txt['signIn.boton']}" class="btn btn-block btn-outline-info" />
+
                             </h:form>
 
 
@@ -63,9 +63,9 @@
                         </div>
                         <div class="card-footer">
                             <small class="d-block text-right mt-3">
-                                <a href="#" class="lead"><i style="color: red" class=" fa fa-use card-link"></i> #{txt['signIn.recuperarClave']}  </a>
-                                <a href="#"></a>
-                                <a href="#" class="lead"><i class=" fa fa-users card-link"></i> #{txt['signIn.registro']}</a>
+                                <h:link class="lead mr-2" value="#{txt['signIn.recuperarClave']}" outcome="signUp" > <i style="color: red" class=" fa fa-use card-link"></i></h:link>
+                                
+                                <h:link class="lead" value="#{txt['signIn.registro']}" outcome="signUp" > <i class=" fa fa-users card-link"></i></h:link>
                             </small>
                         </div>
 
